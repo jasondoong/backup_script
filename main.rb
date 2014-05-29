@@ -3,7 +3,8 @@ require_relative 'backup'
 sourcePath = './ori/'
 targetPath = './target/'
 
-backupAction = BackupAction.new
-backupAction.set_source_and_target(sourcePath,targetPath)
+pair = SourceTargetPair.new(sourcePath, targetPath)
+
+backupAction = BackupAction.new(pair)
 backupAction.backup
 backupAction.printResult

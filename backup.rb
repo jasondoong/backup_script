@@ -1,11 +1,12 @@
 require 'fileutils'
 require_relative 'folder'
+require_relative 'sourceTargetPair'
 
 class BackupAction
     
-  def set_source_and_target(source,target)
-      @sourceFolder = Folder.new source
-      @targetFolder = Folder.new target
+  def initialize(pair)
+      @sourceFolder = Folder.new pair.getSource
+      @targetFolder = Folder.new pair.getTarget
   end
   
   def backup
