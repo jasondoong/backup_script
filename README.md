@@ -5,4 +5,4 @@ Enter the code base folder and execute "ruby main.rb", it will backup files from
 If there is a file with the same name at target folder, it will simply jump to next file without copy it.
 
 #Customize
-Change "sourcePath" and "targetPath" in main.rb, then you can backup any local folder to another local folder
+Assign source folder and target folder by executing "ruby main.rb -f your_source_folder_path -t your_target_folder_path"
